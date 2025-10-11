@@ -221,8 +221,10 @@ def run_pipeline():
     submission.to_csv('artifacts/test_submission.csv', index=False)
 
     # save models and transformers
+    # JSON can't serialize numpy.int32 keys/values; convert to native types
+    tf_vocab = {str(k): int(v) for k, v in tfidf.vocabulary_.items()}
     with open('artifacts/tfidf.vocab.json', 'w', encoding='utf8') as f:
-        json.dump(tfidf.vocabulary_, f)
+        json.dump(tf_vocab, f)
 
     print('\nPipeline finished. Artifacts saved to artifacts/.')
 
