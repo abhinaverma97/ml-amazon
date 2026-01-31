@@ -61,26 +61,4 @@ SMAPE = |100-120| / ((|100| + |120|)/2) * 100% = 18.18%
 
 **Note:** SMAPE is bounded between 0% and 200%. Lower values indicate better performance.
 
-### Leaderboard Information:
 
-- **Public Leaderboard:** During the challenge, rankings will be based on 25K samples from the test set to provide real-time feedback on your model's performance.
-- **Final Rankings:** The final decision will be based on performance on the complete 75K test set along with provided documentation of the proposed approach by the teams.
-
-### Submission Requirements:
-
-1. Upload a `test_out.csv` file in the Portal with the exact same formatting as `sample_test_out.csv`
-
-2. All participating teams must also provide a 1-page document describing:
-   - Methodology used
-   - Model architecture/algorithms selected
-   - Feature engineering techniques applied
-   - Any other relevant information about the approach
-   Note: A sample template for this documentation is provided in Documentation_template.md
-
-
-### Tips for Success:
-
-- Consider both textual features (catalog_content) and visual features (product images)
-- Explore feature engineering techniques for text and image data
-- Consider ensemble methods combining different model types
-- Pay attention to outliers and data preprocessing
