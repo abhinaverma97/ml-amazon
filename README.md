@@ -39,26 +39,4 @@ Note: Make sure to output a prediction for all sample IDs. If you have less/more
 3. **dataset/sample_test.csv:** Sample test input file.
 4. **dataset/sample_test_out.csv:** Sample outputs for sample_test.csv. The output for test.csv must be formatted in the exact same way. Note: The predictions in the file might not be correct
 
-### Constraints:
-
-1. You will be provided with a sample output file. Format your output to match the sample output file exactly. 
-
-2. Predicted prices must be positive float values.
-
-3. Final model should be a MIT/Apache 2.0 License model and up to 8 Billion parameters.
-
-### Evaluation Criteria:
-
-Submissions are evaluated using **Symmetric Mean Absolute Percentage Error (SMAPE)**: A statistical measure that expresses the relative difference between predicted and actual values as a percentage, while treating positive and negative errors equally.
-
-**Formula:**
-```
-SMAPE = (1/n) * Σ |predicted_price - actual_price| / ((|actual_price| + |predicted_price|)/2)
-```
-
-**Example:** If actual price = $100 and predicted price = $120  
-SMAPE = |100-120| / ((|100| + |120|)/2) * 100% = 18.18%
-
-**Note:** SMAPE is bounded between 0% and 200%. Lower values indicate better performance.
-
 
